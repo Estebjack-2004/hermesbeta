@@ -108,35 +108,6 @@
       </div>
     </div>
 
-    <!-- MODAL 2 -->
-    <div class="modal fade" id="detailsModal2" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel2" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="detailsModalLabel2">Detalles de Luis Hernei</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <table class="table table-bordered">
-              <tr><td>Tipo de usuario</td><td>Instructor</td></tr>
-              <tr><td>Fecha de reserva</td><td>10/2000/09</td></tr>
-              <tr><td>Fecha de entrega</td><td>10/2000/09</td></tr>
-              <tr><td>Objeto</td><td>Equipo</td></tr>
-              <tr><td>Cantidad</td><td>04</td></tr>
-            </table>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-success">Autorizar</button>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#rechazoModal2" data-dismiss="modal">Rechazar</button>
-            <button type="button" class="btn btn-primary" onclick="printModal('detailsModal2')">Imprimir</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- MODAL DE RECHAZO 1 -->
     <div class="modal fade" id="rechazoModal1" tabindex="-1" role="dialog" aria-labelledby="rechazoModalLabel1" aria-hidden="true">
       <div class="modal-dialog" role="document">
