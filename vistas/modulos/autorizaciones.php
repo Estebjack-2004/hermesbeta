@@ -1,4 +1,4 @@
-
+<script src="vistas/js/autorizaciones.js"></script>
 <div class="wrapper">
   <div class="content-wrapper">
     <section class="content-header">
@@ -100,7 +100,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-success">Autorizar</button>
-            <button type="button" class="btn btn-danger">Rechazar</button>
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#rechazoModal1" data-dismiss="modal">Rechazar</button>
             <button type="button" class="btn btn-primary" onclick="printModal('detailsModal1')">Imprimir</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
           </div>
@@ -129,9 +129,69 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-success">Autorizar</button>
-            <button type="button" class="btn btn-danger">Rechazar</button>
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#rechazoModal2" data-dismiss="modal">Rechazar</button>
             <button type="button" class="btn btn-primary" onclick="printModal('detailsModal2')">Imprimir</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL DE RECHAZO 1 -->
+    <div class="modal fade" id="rechazoModal1" tabindex="-1" role="dialog" aria-labelledby="rechazoModalLabel1" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-danger">
+            <h5 class="modal-title" id="rechazoModalLabel1">Rechazar préstamo - Cristian Orozco</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="formRechazo1">
+              <div class="form-group">
+                <label for="motivoRechazo1">Motivo del rechazo:</label>
+                <textarea class="form-control" id="motivoRechazo1" rows="5" placeholder="Describa el motivo del rechazo del préstamo..." required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="emailRechazo1">Correo electrónico del solicitante:</label>
+                <input type="email" class="form-control" id="emailRechazo1" value="correo@cristian.com" required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#detailsModal1">Cancelar</button>
+            <button type="button" class="btn btn-danger" onclick="enviarRechazo(1)">Enviar rechazo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL DE RECHAZO 2 -->
+    <div class="modal fade" id="rechazoModal2" tabindex="-1" role="dialog" aria-labelledby="rechazoModalLabel2" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-danger">
+            <h5 class="modal-title" id="rechazoModalLabel2">Rechazar préstamo - Luis Hernei</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="formRechazo2">
+              <div class="form-group">
+                <label for="motivoRechazo2">Motivo del rechazo:</label>
+                <textarea class="form-control" id="motivoRechazo2" rows="5" placeholder="Describa el motivo del rechazo del préstamo..." required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="emailRechazo2">Correo electrónico del solicitante:</label>
+                <input type="email" class="form-control" id="emailRechazo2" value="correo@luis.com" required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#detailsModal2">Cancelar</button>
+            <button type="button" class="btn btn-danger" onclick="enviarRechazo(2)">Enviar rechazo</button>
           </div>
         </div>
       </div>
